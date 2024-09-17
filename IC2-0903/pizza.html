@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Guy</title>
+    <style>
+        .label-header { 
+            display:block;
+            margin-bottom: 5px;
+        }
+        .section {
+            margin: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div style="margin-left: 30px;">
+        <h1>Pizza Guys Order Form</h1>
+        <form method="GET" action="#" name="form1">
+            <div class="section">
+                <img width="300px" src="https://cdn.vox-cdn.com/thumbor/eJO_tZQLEG6GYMHiZ2f8ybcKhWw=/0x0:3936x2624/1270x953/filters:focal(1654x998:2282x1626):format(webp):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/73552652/P_P_Website_Photos__192_of_538_.0.jpg">
+            </div>
+            <div class="section">
+                <label class="label-header" for="name">Name</label>
+                <input type="text" name="name" placeholder="Name" required>
+            </div>
+            <div class="section">
+                <label class="label-header" for="address">Address: #### Street Name ...</label>
+                <input type="text" name="address" placeholder="Delivery address" required>
+            </div>
+            <div class="section">
+                <label class="label-header" for="phone">Phone Number: 123-123-1234</label>
+                <input type="text" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-123-1234" required>
+            </div>
+            <div class="section">
+                <label class="label-header">Pizza Size</label>
+                <input type="radio" id="large" name="size" value="large" required>
+                <label for="large">Large</label>
+                <input type="radio" id="medium" name="size" value="medium">
+                <label for="medium">Medium</label>
+                <input type="radio" id="small" name="size" value="small">
+                <label for="small">Small</label>
+            </div>
+            <div class="section">
+                <label class="label-header">Pizza Size</label>
+                <input type="checkbox" id="sausage" name="sausage" />
+                <label for="sausage">Sausage</label>
+                <input type="checkbox" id="pepperoni" name="pepperoni" />
+                <label for="pepperoni">Pepperoni</label>
+                <input type="checkbox" id="olives" name="olives" />
+                <label for="olives">Olives</label>
+                <input type="checkbox" id="anchovies" name="anchovies" />
+                <label for="anchovies">Anchovies</label>
+                <input type="checkbox" id="onions" name="onions" />
+                <label for="onions">Onions</label>
+            </div>
+            <div class="section">
+                <input type="reset" value="Clear">
+                <input type="submit" value="Place Order">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

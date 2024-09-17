@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mina Cheng</title>
+</head>
+<body>
+    <div style="margin: 30px;">
+        <h1>Hua-Yu Cheng</h1>
+        <span id="indicator" style="padding: 8px; margin: 10px; border: 1px solid; border-radius: 4px;"></span>
+        <h2>Introduction</h2>
+        <ul>
+            <li>Name: Hua-Yu Cheng</li>
+            <li>GitHub Username: <a href="https://github.com/meowhua15">meowhua15</a></li>
+            <li>Favorite Links
+                <ul>
+                    <li><a href="https://www.facebook.com/huayuuu/">Facebook</a></li>
+                    <li><a href="https://www.linkedin.com/in/hycheng15/">LinkedIn</a></li>
+                    <li><a href="https://www.cisecurity.org/cis-benchmarks">CIS Benchmarks</a></li>
+
+                </ul>
+            </li>
+        </ul>
+
+        <h2>More about Me</h2>
+        <p>
+            Hi! My name is Hua-Yu and you can call be Mina. <br>
+            I am from Taiwan and I am a first year MCS student at Rice.<br>
+            I am specifically interested in cybersecurity and interned/worked at the cybersecurity department at PwC before I came here.<br>
+            It's nice to be here and I am looking forward to COMP531!<br>
+        </p>
+
+        <h2>Leave Some Comments!</h2>
+        <textarea rows="6" cols="70" placeholder="Leave some comments"></textarea>
+    </div>
+</body>
+</html>
+<script>
+    window.onload = function() {
+        let timeLeft = 10;
+        
+        function updateCountdown() {
+            document.getElementById("indicator").innerText = timeLeft + " seconds remaining";
+
+            if (timeLeft === 4) {
+                alert("The page will redirect when the counter reaches zero");
+            }
+
+            if (timeLeft === 0) {
+                window.location.href = "https://www.rice.edu";
+            } 
+            else {
+                timeLeft--;
+                setTimeout(updateCountdown, 1000);
+            }
+        };
+
+        updateCountdown();
+    }
+</script>
