@@ -25,15 +25,15 @@ export const tictactoeSlice = createSlice({
             if (!state.board[id]) {
                 state.board[id] = state.playerTurn;
 
-                // check if a player won the game
-                if (wonGame(state.board, state.playerTurn)) {
-                    (state.playerTurn === 'X') ? state.series.xWins++ : state.series.oWins++;
-                    state.board = Array(9).fill("");
-                }
+            //     // check if a player won the game
+            //     if (wonGame(state.board, state.playerTurn)) {
+            //         (state.playerTurn === 'X') ? state.series.xWins++ : state.series.oWins++;
+            //         state.board = Array(9).fill("");
+            //     }
 
-                //check if the game is a draw
-              else if (gameDraw(state.board))
-                  state.board = Array(9).fill("");
+            //     //check if the game is a draw
+            //   else if (gameDraw(state.board))
+            //       state.board = Array(9).fill("");
 
               state.playerTurn = (state.playerTurn === "X") ? "O" : "X";
             }
